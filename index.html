@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reda Mohamed Mohamed | Financial Accountant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-950 text-slate-200">
+
+    <!-- ══════════════ NAVBAR ══════════════ -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent">
+        <div class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
+
+            <a href="#hero" class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-blue-600 rounded-2xl flex items-center justify-center text-white font-bold text-lg flex-shrink-0">RM</div>
+                <span class="text-xl font-semibold hidden sm:block">Reda Mohamed</span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-7 text-sm font-medium">
+                <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
+                <a href="#experience" class="hover:text-blue-400 transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
+                <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
+                <a href="#education" class="hover:text-blue-400 transition-colors">Education</a>
+                <a href="#certifications" class="hover:text-blue-400 transition-colors">Certificates</a>
+                <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <a href="mailto:reda.mohammed.cv@gmail.com"
+                   class="hidden sm:flex bg-blue-600 hover:bg-blue-500 transition-colors px-5 py-2.5 rounded-2xl text-sm font-semibold items-center gap-2">
+                    <i class="fas fa-paper-plane text-xs"></i> Get In Touch
+                </a>
+                <button id="menu-btn" onclick="toggleMobileMenu()" class="md:hidden w-10 h-10 flex items-center justify-center rounded-xl hover:bg-slate-800 transition-colors" aria-label="Menu">
+                    <i class="fas fa-bars text-xl" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-5 py-6 flex flex-col gap-5 text-base">
+                <a href="#about" onclick="closeMobileMenu()" class="hover:text-blue-400 transition-colors">About</a>
+                <a href="#experience" onclick="closeMobileMenu()" class="hover:text-blue-400 transition-colors">Experience</a>
+                <a href="#projects" onclick="closeMobileMenu()" class="hover:text-blue-400 transition-colors">Projects</a>
+                <a href="#skills" onclick="closeMobileMenu()" class="hover:text-blue-400 transition-colors">Skills</a>
+                <a href="#education" onclick="closeMobileMenu()" class="hover:text-blue-400 transition-colors">Education</a>
+                <a href="#certifications" onclick="closeMobileMenu()" class="hover:text-blue-400 transition-colors">Certificates</a>
+                <a href="#contact" onclick="closeMobileMenu()" class="hover:text-blue-400 transition-colors">Contact</a>
+                <a href="mailto:reda.mohammed.cv@gmail.com" class="bg-blue-600 text-center py-3 rounded-2xl font-semibold">Get In Touch</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ══════════════ HERO ══════════════ -->
+    <header id="hero" class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-5 py-16 grid md:grid-cols-2 gap-12 items-center">
+
+            <div class="space-y-7 text-center md:text-left order-2 md:order-1">
+                <div class="inline-flex items-center gap-2 bg-white/10 px-5 py-2.5 rounded-3xl text-sm backdrop-blur-sm">
+                    <div class="w-2.5 h-2.5 bg-green-400 rounded-full animate-pulse"></div>
+                    AVAILABLE FOR WORK
+                </div>
+
+                <div>
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-3">
+                        Reda Mohamed<br>Mohamed
+                    </h1>
+                    <h2 class="text-2xl sm:text-3xl text-blue-400 font-semibold">Professional Accountant</h2>
+                </div>
+
+                <p class="text-base sm:text-lg text-slate-300 max-w-lg mx-auto md:mx-0 leading-relaxed">
+                    Financial Accountant with 2 years of experience, specializing in financial reporting
+                    and performance analysis, with hands-on experience in AI-driven process automation.
+                </p>
+
+                <div class="flex flex-wrap gap-3 justify-center md:justify-start">
+                    <a href="#contact" class="bg-white text-slate-950 px-7 py-3.5 rounded-3xl font-semibold hover:bg-slate-100 transition-colors">
+                        Hire Me
+                    </a>
+                    <a href="https://wa.me/201206938834" target="_blank" rel="noopener"
+                       class="border border-slate-500 px-7 py-3.5 rounded-3xl flex items-center gap-2 hover:border-green-400 hover:text-green-400 transition-colors">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="cv.pdf.pdf" download
+                       class="bg-blue-600 hover:bg-blue-500 px-7 py-3.5 rounded-3xl font-semibold flex items-center gap-2 transition-colors">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex justify-center order-1 md:order-2">
+                <!-- Photo: place your photo file as "photo.jpg" in the same folder -->
+                <div class="relative">
+                    <div class="w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden border-4 border-blue-600 shadow-2xl shadow-blue-900/50">
+                        <img src="WhatsApp Image 2026-04-16 at 3.12.34 PM.jpeg"
+                             alt="Reda Mohamed Mohamed"
+                             id="hero-photo"
+                             class="w-full h-full object-cover object-top"
+                             onerror="this.style.display='none'; document.getElementById('photo-fallback').style.display='flex'">
+                        <div id="photo-fallback"
+                             style="display:none"
+                             class="w-full h-full bg-gradient-to-br from-blue-800 to-slate-800 flex flex-col items-center justify-center gap-3">
+                            <i class="fas fa-user text-6xl text-blue-300 opacity-60"></i>
+                            <p class="text-slate-400 text-sm text-center px-4">Add photo.jpg<br>to this folder</p>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-3 -right-3 bg-blue-600 rounded-2xl px-4 py-2 text-sm font-semibold shadow-lg">
+                        2+ Years Exp.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- ══════════════ ABOUT ══════════════ -->
+    <section id="about" class="py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="grid md:grid-cols-12 gap-10 items-start">
+                <div class="md:col-span-5">
+                    <p class="text-blue-400 font-semibold text-sm tracking-widest uppercase mb-3">About Me</p>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+                        Professional Accountant with precision
+                    </h2>
+                </div>
+                <div class="md:col-span-7 space-y-4 text-slate-300 text-base sm:text-lg leading-relaxed">
+                    <p>Accountant with 2 years of practical experience in financial accounting, bookkeeping, journal entries, and preparing financial statements.</p>
+                    <p>Experienced in automating accounting processes using artificial intelligence technologies, improving accuracy and efficiency.</p>
+                    <p>Holder of an Electronic Accounting Diploma and multiple certificates in Excel, QuickBooks, and Peachtree.</p>
+                    <div class="flex flex-wrap gap-3 pt-2">
+                        <span class="stat-pill"><i class="fas fa-graduation-cap text-blue-400"></i> B.Com – Al-Azhar University</span>
+                        <span class="stat-pill"><i class="fas fa-map-marker-alt text-blue-400"></i> Egypt</span>
+                        <span class="stat-pill"><i class="fas fa-phone text-blue-400"></i> 01206938834</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════ EXPERIENCE ══════════════ -->
+    <section id="experience" class="py-16 md:py-24 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-5">
+            <p class="text-blue-400 font-semibold text-sm tracking-widest uppercase mb-3">Career</p>
+            <h2 class="section-title font-bold mb-10">Work Experience</h2>
+
+            <div class="bg-slate-950 rounded-3xl p-7 sm:p-10 border border-slate-800">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
+                    <div>
+                        <h3 class="text-xl sm:text-2xl font-semibold">Financial Accountant</h3>
+                        <p class="text-blue-400 mt-1">Egypt</p>
+                    </div>
+                    <span class="inline-flex items-center gap-2 bg-blue-900/40 text-blue-300 px-4 py-2 rounded-2xl text-sm font-medium self-start">
+                        <i class="fas fa-calendar"></i> 2023 – Present
+                    </span>
+                </div>
+                <ul class="space-y-3.5 text-slate-300">
+                    <li class="flex gap-3"><i class="fas fa-check text-blue-400 mt-1 flex-shrink-0"></i><span>Recording daily financial transactions and maintaining accurate ledgers</span></li>
+                    <li class="flex gap-3"><i class="fas fa-check text-blue-400 mt-1 flex-shrink-0"></i><span>Preparing journal entries and reconciling accounts</span></li>
+                    <li class="flex gap-3"><i class="fas fa-check text-blue-400 mt-1 flex-shrink-0"></i><span>Organizing documents, invoices, and financial records</span></li>
+                    <li class="flex gap-3"><i class="fas fa-check text-blue-400 mt-1 flex-shrink-0"></i><span>Preparing financial reports and performance analysis statements</span></li>
+                    <li class="flex gap-3"><i class="fas fa-check text-blue-400 mt-1 flex-shrink-0"></i><span>Automating accounting workflows using AI tools to increase efficiency</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════ PROJECTS ══════════════ -->
+    <section id="projects" class="py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-5">
+            <p class="text-blue-400 font-semibold text-sm tracking-widest uppercase mb-3">Portfolio</p>
+            <h2 class="section-title font-bold mb-10">Key Projects</h2>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="project-card bg-slate-900 rounded-3xl p-7 border border-slate-800 hover:border-blue-600 transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-900/50 rounded-2xl flex items-center justify-center mb-5">
+                        <i class="fas fa-book-open text-blue-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Full Accounting Cycle</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Complete end-to-end accounting cycle implementation including journal entries, ledgers, trial balances, and final financial statements.</p>
+                </div>
+                <div class="project-card bg-slate-900 rounded-3xl p-7 border border-slate-800 hover:border-blue-600 transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-900/50 rounded-2xl flex items-center justify-center mb-5">
+                        <i class="fas fa-chart-line text-blue-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Excel Financial Dashboard</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Dynamic financial reporting dashboard built in Microsoft Excel with automated KPIs, charts, and variance analysis.</p>
+                </div>
+                <div class="project-card bg-slate-900 rounded-3xl p-7 border border-slate-800 hover:border-blue-600 transition-all duration-300 sm:col-span-2 lg:col-span-1">
+                    <div class="w-12 h-12 bg-blue-900/50 rounded-2xl flex items-center justify-center mb-5">
+                        <i class="fas fa-laptop text-blue-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">QuickBooks & Peachtree Implementation</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Setup and configuration of accounting software systems with chart of accounts, vendor/customer management, and reporting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════ SKILLS ══════════════ -->
+    <section id="skills" class="py-16 md:py-24 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-5">
+            <p class="text-blue-400 font-semibold text-sm tracking-widest uppercase mb-3">Expertise</p>
+            <h2 class="section-title font-bold mb-10">Skills</h2>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="skill-card">
+                    <i class="fas fa-calculator text-blue-400 text-xl mb-3"></i>
+                    <span>Financial Accounting</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-book text-blue-400 text-xl mb-3"></i>
+                    <span>Bookkeeping</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-file-invoice-dollar text-blue-400 text-xl mb-3"></i>
+                    <span>Journal Entries</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-chart-bar text-blue-400 text-xl mb-3"></i>
+                    <span>Financial Statements</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-table text-green-400 text-xl mb-3"></i>
+                    <span>Microsoft Excel</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-laptop-code text-green-400 text-xl mb-3"></i>
+                    <span>QuickBooks</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-desktop text-green-400 text-xl mb-3"></i>
+                    <span>Peachtree</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-file-alt text-green-400 text-xl mb-3"></i>
+                    <span>Financial Reporting</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-robot text-purple-400 text-xl mb-3"></i>
+                    <span>AI-Driven Automation</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-python text-purple-400 text-xl mb-3"></i>
+                    <span>Python Programming</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-chart-pie text-purple-400 text-xl mb-3"></i>
+                    <span>Data Analysis</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-search-dollar text-blue-400 text-xl mb-3"></i>
+                    <span>Financial Analysis</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════ EDUCATION ══════════════ -->
+    <section id="education" class="py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-5">
+            <p class="text-blue-400 font-semibold text-sm tracking-widest uppercase mb-3">Academic</p>
+            <h2 class="section-title font-bold mb-10">Education</h2>
+
+            <div class="bg-slate-900 rounded-3xl p-7 sm:p-10 border border-slate-800">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div class="flex gap-5 items-start">
+                        <div class="w-14 h-14 bg-blue-900/50 rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-university text-blue-400 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl sm:text-2xl font-semibold">Bachelor of Commerce</h3>
+                            <p class="text-blue-400 mt-1">Al-Azhar University</p>
+                            <p class="text-slate-400 text-sm mt-1">Major: Accounting</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2 sm:text-right">
+                        <span class="grade-badge">Grade: Good</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Electronic Accounting Diploma -->
+            <div class="mt-5 bg-slate-900 rounded-3xl p-7 sm:p-10 border border-slate-800">
+                <div class="flex gap-5 items-start">
+                    <div class="w-14 h-14 bg-green-900/40 rounded-2xl flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-certificate text-green-400 text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl sm:text-2xl font-semibold">Electronic Accounting Diploma</h3>
+                        <p class="text-green-400 mt-1">Professional Certification</p>
+                        <p class="text-slate-400 text-sm mt-1">Covering QuickBooks, Peachtree, and Excel for accounting</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════ CERTIFICATIONS ══════════════ -->
+    <section id="certifications" class="py-16 md:py-24 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-5">
+            <p class="text-blue-400 font-semibold text-sm tracking-widest uppercase mb-3">Credentials</p>
+            <h2 class="section-title font-bold mb-3">Certificates</h2>
+            <p class="text-slate-400 mb-10">Click on any certificate to view full size</p>
+            <div id="cert-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"></div>
+        </div>
+    </section>
+
+    <!-- ══════════════ MILITARY ══════════════ -->
+    <section class="py-12 md:py-16">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="bg-gradient-to-r from-blue-950 to-slate-900 rounded-3xl p-8 sm:p-12 flex flex-col sm:flex-row gap-8 items-center border border-blue-900/50">
+                <div class="w-20 h-20 bg-blue-900/60 rounded-3xl flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-shield-alt text-4xl text-blue-400"></i>
+                </div>
+                <div class="text-center sm:text-left">
+                    <h3 class="text-2xl font-bold mb-1">Military Service</h3>
+                    <p class="text-blue-400 font-medium mb-2">Reserve Officer – Egyptian Armed Forces (2 years)</p>
+                    <p class="text-slate-400">Awarded Certificate of Good Conduct upon completion of service</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════ CONTACT ══════════════ -->
+    <section id="contact" class="py-16 md:py-24 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-5">
+            <p class="text-blue-400 font-semibold text-sm tracking-widest uppercase mb-3">Contact</p>
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+
+                <div>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 leading-tight">
+                        Let's work<br>together
+                    </h2>
+                    <div class="space-y-6">
+                        <a href="tel:01206938834" class="contact-info-card">
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <p class="text-slate-400 text-sm mb-0.5">Phone</p>
+                                <p class="text-xl font-medium">01206938834</p>
+                            </div>
+                        </a>
+                        <a href="mailto:reda.mohammed.cv@gmail.com" class="contact-info-card">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <p class="text-slate-400 text-sm mb-0.5">Email</p>
+                                <p class="text-lg font-medium break-all">reda.mohammed.cv@gmail.com</p>
+                            </div>
+                        </a>
+                        <a href="https://wa.me/201206938834" target="_blank" rel="noopener" class="contact-info-card">
+                            <div class="contact-icon green"><i class="fab fa-whatsapp"></i></div>
+                            <div>
+                                <p class="text-slate-400 text-sm mb-0.5">WhatsApp</p>
+                                <p class="text-xl font-medium">+20 120 693 8834</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Formspree form — works as-is, no JS needed -->
+                <form action="https://formspree.io/f/mjgjyawn" method="POST" class="space-y-4" id="contact-form">
+                    <div>
+                        <input type="text" name="name" placeholder="Your Name" required
+                               class="form-input w-full bg-slate-950 border border-slate-700 rounded-2xl px-6 py-4 text-base placeholder-slate-500 focus:border-blue-500 focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                        <input type="email" name="email" placeholder="Your Email" required
+                               class="form-input w-full bg-slate-950 border border-slate-700 rounded-2xl px-6 py-4 text-base placeholder-slate-500 focus:border-blue-500 focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                        <textarea name="message" placeholder="Your Message" rows="5" required
+                                  class="form-input w-full bg-slate-950 border border-slate-700 rounded-2xl px-6 py-4 text-base placeholder-slate-500 focus:border-blue-500 focus:outline-none transition-colors resize-none"></textarea>
+                    </div>
+                    <button type="submit"
+                            class="w-full bg-blue-600 hover:bg-blue-500 transition-colors py-4 rounded-2xl text-lg font-semibold flex items-center justify-center gap-2">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                    <div id="form-success" class="hidden bg-green-900/40 border border-green-700 text-green-300 rounded-2xl px-6 py-4 text-center">
+                        <i class="fas fa-check-circle mr-2"></i> Message sent! I'll get back to you soon.
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════ FOOTER ══════════════ -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-10">
+        <div class="max-w-7xl mx-auto px-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-sm">RM</div>
+                <span class="text-slate-400 text-sm">Reda Mohamed Mohamed</span>
+            </div>
+            <p class="text-slate-600 text-sm">© 2024 All rights reserved</p>
+            <div class="flex gap-4">
+                <a href="mailto:reda.mohammed.cv@gmail.com" class="w-9 h-9 bg-slate-800 hover:bg-blue-600 rounded-xl flex items-center justify-center transition-colors" aria-label="Email">
+                    <i class="fas fa-envelope text-sm"></i>
+                </a>
+                <a href="https://wa.me/201206938834" target="_blank" rel="noopener" class="w-9 h-9 bg-slate-800 hover:bg-green-600 rounded-xl flex items-center justify-center transition-colors" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp text-sm"></i>
+                </a>
+                <a href="tel:01206938834" class="w-9 h-9 bg-slate-800 hover:bg-blue-600 rounded-xl flex items-center justify-center transition-colors" aria-label="Phone">
+                    <i class="fas fa-phone text-sm"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ══════════════ CERTIFICATE MODAL ══════════════ -->
+    <div id="cert-modal" class="cert-modal hidden" onclick="hideCertModal(event)">
+        <div class="cert-modal-inner" onclick="event.stopPropagation()">
+            <div class="flex items-center justify-between p-5 border-b border-slate-700">
+                <h3 id="modal-title" class="font-semibold text-lg pr-4"></h3>
+                <button onclick="hideCertModal()" class="w-9 h-9 rounded-xl bg-slate-700 hover:bg-red-600 transition-colors flex items-center justify-center flex-shrink-0" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="p-4">
+                <img id="modal-image" src="" alt="" class="w-full max-h-[75vh] object-contain rounded-xl">
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+            class="fixed bottom-6 right-6 w-12 h-12 bg-blue-600 hover:bg-blue-500 rounded-2xl flex items-center justify-center shadow-lg transition-all opacity-0 pointer-events-none z-40"
+            aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ── Base ─────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* ── Navbar scroll effect ─────────────────────── */
+#navbar.scrolled {
+    background-color: rgba(2, 6, 23, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom-color: rgb(30 41 59);
+}
+
+/* ── Hero background ──────────────────────────── */
+.hero-bg {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 60%, #0f172a 100%);
+    position: relative;
+}
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 70% 50%, rgba(30, 58, 138, 0.4) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* ── Section title ────────────────────────────── */
+.section-title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    line-height: 1.15;
+}
+
+/* ── Stat pills (about section) ───────────────── */
+.stat-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgb(15 23 42);
+    border: 1px solid rgb(30 41 59);
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    color: rgb(148 163 184);
+}
+
+/* ── Skill cards ──────────────────────────────── */
+.skill-card {
+    background: rgb(2 6 23);
+    border: 1px solid rgb(30 41 59);
+    border-radius: 1.25rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: rgb(203 213 225);
+    transition: border-color 0.2s, transform 0.2s;
+}
+.skill-card:hover {
+    border-color: rgb(37 99 235);
+    transform: translateY(-4px);
+}
+
+/* ── Project cards ────────────────────────────── */
+.project-card {
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -12px rgba(37, 99, 235, 0.2);
+}
+
+/* ── Grade badge ──────────────────────────────── */
+.grade-badge {
+    display: inline-block;
+    background: rgba(37, 99, 235, 0.15);
+    border: 1px solid rgba(37, 99, 235, 0.4);
+    color: rgb(147 197 253);
+    padding: 0.4rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* ── Certificate grid cards ───────────────────── */
+.cert-card {
+    background: rgb(2 6 23);
+    border: 1px solid rgb(30 41 59);
+    border-radius: 1.5rem;
+    padding: 1rem;
+    cursor: pointer;
+    transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+.cert-card:hover {
+    border-color: rgb(37 99 235);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px -8px rgba(37, 99, 235, 0.25);
+}
+.cert-thumb {
+    aspect-ratio: 4/3;
+    background: rgb(15 23 42);
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cert-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+.cert-card:hover .cert-thumb img {
+    transform: scale(1.05);
+}
+.cert-thumb-fallback {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgb(71 85 105);
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 1rem;
+}
+.cert-card h4 {
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-align: center;
+    color: rgb(203 213 225);
+    line-height: 1.4;
+}
+
+/* ── Contact info cards ───────────────────────── */
+.contact-info-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgb(2 6 23);
+    border: 1px solid rgb(30 41 59);
+    border-radius: 1.25rem;
+    padding: 1.25rem 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s, transform 0.2s;
+}
+.contact-info-card:hover {
+    border-color: rgb(37 99 235);
+    transform: translateX(4px);
+}
+.contact-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+    background: rgba(37, 99, 235, 0.15);
+    border-radius: 0.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: rgb(96 165 250);
+    font-size: 1.1rem;
+}
+.contact-icon.green {
+    background: rgba(22, 163, 74, 0.15);
+    color: rgb(74 222 128);
+}
+
+/* ── Form inputs ──────────────────────────────── */
+.form-input {
+    color: rgb(226 232 240);
+    transition: border-color 0.2s;
+}
+.form-input:focus {
+    outline: none;
+    border-color: rgb(37 99 235);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* ── Certificate modal ────────────────────────── */
+.cert-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+.cert-modal.hidden {
+    display: none;
+}
+.cert-modal-inner {
+    background: rgb(15 23 42);
+    border: 1px solid rgb(30 41 59);
+    border-radius: 1.5rem;
+    width: 100%;
+    max-width: 56rem;
+    max-height: 95vh;
+    overflow-y: auto;
+    animation: modalIn 0.2s ease;
+}
+@keyframes modalIn {
+    from { opacity: 0; transform: scale(0.96) translateY(8px); }
+    to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* ── Back to top ──────────────────────────────── */
+#back-to-top {
+    transition: opacity 0.3s, transform 0.3s;
+}
+#back-to-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+#back-to-top:hover {
+    transform: translateY(-3px);
+}
+
+/* ── Responsive overrides ─────────────────────── */
+@media (max-width: 640px) {
+    .contact-info-card { padding: 1rem 1.25rem; }
+    .cert-modal-inner  { border-radius: 1rem; }
+}
+
+/* ── Active nav link highlight ────────────────── */
+.nav-link-active {
+    color: rgb(96 165 250) !important;
+}
+
+/* ── Scroll animations ────────────────────────── */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

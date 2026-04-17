@@ -1,0 +1,59 @@
+# SETUP INSTRUCTIONS — Reda Mohamed Portfolio
+# =============================================
+
+## Files in this folder:
+- index.html   ← Main website (open this in browser)
+- style.css    ← All styles
+- main.js      ← All JavaScript (no duplicates)
+- cv.pdf       ← ADD YOUR CV HERE (rename to cv.pdf)
+- photo.jpg    ← ADD YOUR PHOTO HERE (rename to photo.jpg)
+- cert1.jpeg   ← Certificate image 1
+- cert2.jpeg   ← Certificate image 2
+- cert3.jpeg   ← Certificate image 3
+- cert4.jpeg   ← Certificate image 4
+- cert5.jpeg   ← Certificate image 5
+- cert6.jpeg   ← Certificate image 6
+- cert7.jpeg   ← Certificate image 7
+
+## HOW TO ADD YOUR PHOTO:
+1. Rename your photo file to:  photo.jpg
+2. Place it in the same folder as index.html
+3. Done! It will appear automatically.
+
+## HOW TO ADD CERTIFICATE IMAGES:
+1. Rename your certificate images to: cert1.jpeg, cert2.jpeg, cert3.jpeg ...etc
+2. Place them in the same folder as index.html
+3. Done! They appear in the Certificates section.
+
+   Your original filenames were:
+   WhatsApp Image 2026-04-16 at 2.57.51 PM.jpeg       → rename to cert1.jpeg
+   WhatsApp Image 2026-04-16 at 2.57.51 PM (3).jpeg   → rename to cert2.jpeg
+   WhatsApp Image 2026-04-16 at 2.57.51 PM (2).jpeg   → rename to cert3.jpeg
+   WhatsApp Image 2026-04-16 at 2.57.51 PM (1).jpeg   → rename to cert4.jpeg
+   WhatsApp Image 2026-04-16 at 2.57.52 PM.jpeg       → rename to cert5.jpeg
+   WhatsApp Image 2026-04-16 at 2.57.50 PM (3).jpeg   → rename to cert6.jpeg
+   (duplicate cert1)                                   → rename to cert7.jpeg
+
+## HOW TO ADD YOUR CV:
+1. Rename your CV file to:  cv.pdf
+2. Place it in the same folder as index.html
+3. The Download CV button will work automatically.
+
+## HOW TO OPEN:
+Just double-click index.html in the folder — it opens in your browser.
+No server needed!
+
+## BUGS FIXED FROM ORIGINAL:
+✅ Removed duplicate JavaScript functions (toggleMobileMenu, smoothScrollTo, DOMContentLoaded)
+✅ Fixed broken image paths (Windows absolute paths → relative filenames)
+✅ Fixed navbar: now sticky/fixed with scroll effect instead of static
+✅ Fixed mobile menu: closes properly, icon switches between bars/X
+✅ Fixed certificate modal: closes on Escape key, backdrop click, and X button
+✅ Fixed contact form: AJAX submission with success message (no page reload)
+✅ Added back-to-top button
+✅ Added scroll animations (fade in on scroll)
+✅ Added active nav link highlighting
+✅ Fixed responsive layout for all screen sizes (mobile, tablet, desktop)
+✅ Fixed hero photo with graceful fallback if image missing
+✅ Removed duplicate CSS @import
+✅ All hover/focus states for accessibility
